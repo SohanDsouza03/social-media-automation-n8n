@@ -1,5 +1,53 @@
 {
   "name": "Social Media Automation Workflow",
-  "nodes": [],
-  "connections": {}
+  "description": "AI-powered social media automation using n8n",
+  "nodes": [
+    {
+      "name": "Schedule Trigger",
+      "type": "Schedule"
+    },
+    {
+      "name": "Get Trending Topic",
+      "type": "HTTP Request"
+    },
+    {
+      "name": "Generate Post Content",
+      "type": "OpenAI"
+    },
+    {
+      "name": "Generate Hashtags",
+      "type": "OpenAI"
+    },
+    {
+      "name": "Create Social Media Post",
+      "type": "Set"
+    },
+    {
+      "name": "Post to Twitter",
+      "type": "Twitter"
+    },
+    {
+      "name": "Post to LinkedIn",
+      "type": "LinkedIn"
+    },
+    {
+      "name": "Store in Google Sheets",
+      "type": "Google Sheets"
+    },
+    {
+      "name": "Send Telegram Summary",
+      "type": "Telegram"
+    }
+  ],
+  "workflow": [
+    "Schedule Trigger",
+    "Get Trending Topic",
+    "Generate Post Content",
+    "Generate Hashtags",
+    "Create Social Media Post",
+    "Post to Twitter",
+    "Post to LinkedIn",
+    "Store in Google Sheets",
+    "Send Telegram Summary"
+  ]
 }
